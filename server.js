@@ -41,7 +41,9 @@ hbs.registerHelper('getCurrentYear',()=>{
  		currentYear:new Date().getFullYear()
  	});
  });
-
+app.get('/projects',(req,res)=>{
+	res.render('projects.hbs');
+})
  app.listen(port,()=>{
  	console.log(`Server is running on port ${port}`)
  });
